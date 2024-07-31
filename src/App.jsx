@@ -1,13 +1,98 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
+import { faker } from "@faker-js/faker";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [allCats, setAllCats] = useState([]);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState({});
 
-  return(
-    <div>
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        "https://api.thecatapi.com/v1/images/search?limit=10"
+      );
 
-    </div>
+      if (!response.ok) {
+        throw new Error("An error has occured");
+      }
+
+      const catsData = await response.json();
+      setAllCats(catsData);
+      setErrorMsg("");
+    } catch (error) {
+      console.log(error.message);
+      setErrorMsg(error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleClick = (cat) => {
+    setOpen(true);
+    setSelected(cat);
+  };
+
+  const modalRef = useRef();
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current === event.target) {
+      handleClose();
+    }
+  };
+
+  const randomCatPrice = faker.commerce.price({min: 100, max: 1500, dec: 2, symbol: "£"});
+  const randomCatName = faker.person.fullName();
+  const randomCatDOB = faker.date.birthdate({min: 0, max: 22, mode: "age"});
+  const randomCatCity = faker.location.city();
+
+  setAllCats.
+
+  return (
+    <>
+      <h1>Cats4Lyfe</h1>
+
+      {errorMsg !== "" && <p>{errorMsg}</p>}
+      <div id="catContainer">
+        {allCats.map((cat, index) => {
+          return (
+            <div className="catsSale" key={index}>
+              <img className="img" onClick={() => handleClick(cat)} src={cat.url}></img>
+              <p>{randomCatPrice}</p>
+            </div>
+          );
+        })}
+      </div>
+
+      {open && (
+        <div className="modalBg" ref={modalRef} onClick={handleClickOutside}>
+          <div className="modal">
+            <div className="catName">
+              <h2>{selected.randomCatName}</h2>
+            </div>
+
+            <div className="catDetails">
+              <h3>Release Date:{selected.release_date}</h3>
+            </div>
+
+            <p>{selected.description}</p>
+            <button id="x" onClick={handleClose}>
+              X
+            </button>
+            <button id="close" onClick={handleClose}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
