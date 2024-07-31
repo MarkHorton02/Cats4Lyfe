@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Routes, Route, Link } from 'react-router-dom'
 import About from './About'
-import './Home'
+import Home from './Home'
 
 const App = () => {
   const [count, setCount] = useState(0)
