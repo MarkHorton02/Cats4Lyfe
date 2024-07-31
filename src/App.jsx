@@ -12,7 +12,7 @@ const App = () => {
       <h1>Testing</h1>
 
       <nav>
-        <link>Home</link>
+        <Link to='/'>Home</Link>
         <Link to='/About'>About</Link>
       </nav>
 
