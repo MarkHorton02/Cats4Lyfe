@@ -1,5 +1,5 @@
 import PayPal  from '../assets/Paypal.png'
-import VisaDebit from '../assets/Visa.png'
+import VisaDebit from '../assets/visa.png'
 import MasterCard from '../assets/mastercard.png'
 import  Amex  from '../assets/amex.png'
 
