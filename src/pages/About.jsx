@@ -1,3 +1,8 @@
+import  imageJ  from '../assets/JohnImageAboutUs.jpg'
+
+// import  imageK  from '../assets/KyleImageAboutUs.jpg'
+// import  imageM  from '../assets/MarkImageAboutUs.jpg'
+
 const About = () => {
     return(
     <div>
@@ -8,15 +13,15 @@ const About = () => {
             fun to steal cats and sell them for a profit.</p>
         <div>
             <h5>Mark</h5>
-            <img src="" />
+            {/* <img src={imageM} /> */}
         </div>
         <div>
             <h5>John</h5>
-            <img src='./assets/JohnImageAboutUs.jpg'></img>
+            <img src={imageJ}></img>
         </div>
         <div>
             <h5>Kyle</h5>
-            <img src="" />
+            {/* <img src={imageK} /> */}
         </div>
     </div>
 )}
