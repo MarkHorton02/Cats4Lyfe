@@ -19,7 +19,16 @@ const App = () => {
       }
 
       const catsData = await response.json();
-      setAllCats(catsData);
+      const mainData = catsData.map((cat) => {
+        return {
+          ...cat,
+          name: faker.person.fullName(),
+          dob: faker.date.birthdate({min: 0, max: 22, mode: "age"}),
+          city: faker.location.city()
+        }
+      })
+
+      setAllCats(mainData);
       setErrorMsg("");
     } catch (error) {
       console.log(error.message);
@@ -53,8 +62,6 @@ const App = () => {
   const randomCatDOB = faker.date.birthdate({min: 0, max: 22, mode: "age"});
   const randomCatCity = faker.location.city();
 
-  setAllCats.
-
   return (
     <>
       <h1>Cats4Lyfe</h1>
@@ -65,7 +72,7 @@ const App = () => {
           return (
             <div className="catsSale" key={index}>
               <img className="img" onClick={() => handleClick(cat)} src={cat.url}></img>
-              <p>{randomCatPrice}</p>
+              <p>{faker.commerce.price({min: 100, max: 1500, dec: 2, symbol: "£"})}</p>
             </div>
           );
         })}
@@ -75,7 +82,7 @@ const App = () => {
         <div className="modalBg" ref={modalRef} onClick={handleClickOutside}>
           <div className="modal">
             <div className="catName">
-              <h2>{selected.randomCatName}</h2>
+              <h2>{selected.name}</h2>
             </div>
 
             <div className="catDetails">
@@ -83,12 +90,8 @@ const App = () => {
             </div>
 
             <p>{selected.description}</p>
-            <button id="x" onClick={handleClose}>
-              X
-            </button>
-            <button id="close" onClick={handleClose}>
-              Close
-            </button>
+            <button id="x" onClick={handleClose}>X</button>
+            <button id="close" onClick={handleClose}>Close</button>
           </div>
         </div>
       )}
