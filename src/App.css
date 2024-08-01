@@ -3,7 +3,7 @@
   margin: 0 auto;
 
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .navBar {
@@ -24,9 +24,6 @@ box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
 
 .modal, .iconModal {
   position:relative;
-  /* top:50%;
-  left:50%;
-  transform: translate(-50%, -50%); */
   background-color: #3297CC;
   border: 3px, white, solid;
   max-height: 70vh;
