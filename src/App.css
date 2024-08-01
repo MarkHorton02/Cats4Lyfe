@@ -1,20 +1,19 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-img{
-height:300px;
-width:200px;
-cursor: pointer;
-box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
+img {
+  height: 300px;
+  width: 200px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
 }
 
 .modal {
-  position:relative;
+  position: relative;
   /* top:50%;
   left:50%;
   transform: translate(-50%, -50%); */
@@ -25,63 +24,66 @@ box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
   overflow-y: scroll;
 }
 
-.modalBg{
-display: grid;
-place-items: center;
-position: fixed;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-backdrop-filter: blur(10px);
+.modalBg {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
 }
 
-#x{
+#x {
   position: absolute;
   top: 0;
   right: 0;
   color: red;
-  background:transparent;
+  background: transparent;
   font-weight: bold;
-  }
+}
 
-  #x:hover{
-    background-color: #3296cc79;
-    
-  }
+#x:hover {
+  background-color: #3296cc79;
 
-#close{
+}
+
+#close {
   color: red;
   background-color: #3297CC;
   border: 3px white solid;
   font-weight: bold;
 }
 
-#close:hover, #filter:hover, #ddBtns:hover{
+#close:hover,
+#filter:hover,
+#ddBtns:hover {
   background-color: #27749d;
 }
 
-.title, .release {
+.title,
+.release {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-#catContainer{
+#catContainer {
   display: flex;
-  flex-wrap:wrap;
-  gap:20px;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
-#banner{
-  height:300px;
-  width:879.5px;
+#banner {
+  height: 300px;
+  width: 879.5px;
   cursor: default;
 }
 
-#dd{
-  margin-bottom:10px ;
+#dd {
+  margin-bottom: 10px;
 }
 
 #ddBtns {
