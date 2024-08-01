@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
-import { faker } from "@faker-js/faker";
+import { faker} from "@faker-js/faker";
 
 const App = () => {
   const [allCats, setAllCats] = useState([]);
@@ -57,11 +57,6 @@ const App = () => {
     }
   };
 
-  const randomCatPrice = faker.commerce.price({min: 100, max: 1500, dec: 2, symbol: "£"});
-  const randomCatName = faker.person.fullName();
-  const randomCatDOB = faker.date.birthdate({min: 0, max: 22, mode: "age"});
-  const randomCatCity = faker.location.city();
-
   return (
     <>
       <h1>Cats4Lyfe</h1>
@@ -83,10 +78,8 @@ const App = () => {
           <div className="modal">
             <div className="catName">
               <h2>{selected.name}</h2>
-            </div>
-
-            <div className="catDetails">
-              <h3>Release Date:{selected.release_date}</h3>
+              <p>This cat is from {selected.city}!</p>
+              <p>This cat was born on {selected.dob.toString()}!</p>
             </div>
 
             <p>{selected.description}</p>
