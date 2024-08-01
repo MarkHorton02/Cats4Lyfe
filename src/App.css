@@ -1,43 +1,113 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navBar {
+  background-color: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+#imgK, #imgJ { 
+  height:200px;
+  width:500px ;
+}
+
+img{
+height:300px;
+width:200px;
+cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
+}
+
+.modal, .iconModal {
+  position:relative;
+  /* top:50%;
+  left:50%;
+  transform: translate(-50%, -50%); */
+  background-color: #3297CC;
+  border: 3px, white, solid;
+  max-height: 70vh;
+  max-width: 70vw;
+  overflow-y: scroll;
+}
+
+.modalBg{
+display: grid;
+place-items: center;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+backdrop-filter: blur(10px);
+}
+
+#x{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  background:transparent;
+  font-weight: bold;
   }
-  to {
-    transform: rotate(360deg);
+
+  #x:hover{
+    background-color: #3296cc79;
+    
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  #addBasket{
+    color: greenyellow;
+    background-color: #3297CC;
+    border: 3px white solid;
+    font-weight: bold;
   }
+
+#close {
+  color: red;
+  background-color: #3297CC;
+  border: 3px white solid;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+#close:hover, #filter:hover, #ddBtns:hover{
+  background-color: #27749d;
 }
 
-.read-the-docs {
-  color: #888;
+.title, .release {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#catContainer{
+  display: flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content: center;
+}
+
+#banner{
+  height:300px;
+  width:879.5px;
+  cursor: default;
+}
+
+#dd{
+  margin-bottom:10px ;
+}
+
+#ddBtns {
+  background-color: #3297CC;
+  border: 3px white solid;
+  margin: 5px 5px 0;
+}
+
+#filter {
+  background-color: #3297CC;
+  border: 3px white solid;
+  margin-bottom: 5px;
 }
