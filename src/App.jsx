@@ -51,7 +51,7 @@ const App = () => {
       {open && (
         <div className="modalBg" ref={modalRef} onClick={handleClickOutside}>
           
-          <div className='icon-modal'>
+          <div className='iconModal'>
 
             <div className='Products'>
             {catsInBasket.map((cat, index) => {

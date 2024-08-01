@@ -8,7 +8,11 @@
 
 .navBar {
   background-color: white;
+}
 
+#imgK, #imgJ { 
+  height:200px;
+  width:500px ;
 }
 
 img{
@@ -18,7 +22,7 @@ cursor: pointer;
 box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
 }
 
-.modal {
+.modal, .iconModal {
   position:relative;
   /* top:50%;
   left:50%;
@@ -55,7 +59,14 @@ backdrop-filter: blur(10px);
     
   }
 
-#close{
+  #addBasket{
+    color: greenyellow;
+    background-color: #3297CC;
+    border: 3px white solid;
+    font-weight: bold;
+  }
+
+#close {
   color: red;
   background-color: #3297CC;
   border: 3px white solid;
