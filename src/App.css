@@ -1,14 +1,18 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .navBar {
+  display: flex;
+  justify-content: center;
   background-color: white;
+  width: 100vw;
+  gap: 5px;
 }
+
 
 #imgK, #imgJ { 
   height:200px;
@@ -20,6 +24,19 @@ height:300px;
 width:200px;
 cursor: pointer;
 box-shadow: rgba(0, 0, 0, 0.425) 5px 5px 15px;
+}
+
+.icons {
+  display: flex;
+  /* width: 100%; */
+  gap: 10px;
+  justify-content: center;
+}
+
+#icons{
+  height:80px;
+  width:80px;
+  
 }
 
 .modal, .iconModal {
@@ -71,6 +88,7 @@ backdrop-filter: blur(10px);
   background-color: #3297CC;
   border: 3px white solid;
   font-weight: bold;
+  margin-bottom:5px ;
 }
 
 #close:hover, #filter:hover, #ddBtns:hover{

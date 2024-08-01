@@ -25,9 +25,9 @@ const Home = ({setCatsInBasket}) => {
           name: faker.person.fullName(),
           dob: faker.date.birthdate({min: 0, max: 22, mode: "age"}),
           city: faker.location.city(),
-          price: parseInt(faker.commerce.price({min: 100, max: 1500, dec: 2}))
-        }
-      })
+          price: parseInt(faker.commerce.price({min: 100, max: 1500, dec: 2})),
+          // picture: this.url
+      }})
 
       setAllCats(mainData);
       setErrorMsg("");

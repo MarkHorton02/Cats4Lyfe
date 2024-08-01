@@ -17,10 +17,13 @@ const Checkout = ({catsInBasket}) => {
             )
         })}
         <h2>Total Price: £{catsInBasket.reduce((total, cat) => total+cat.price, 0)}</h2>
-        <img id='payPal' src={PayPal} />
-        <img id='masterCard' src={MasterCard} />
-        <img id='visa' src={VisaDebit} />
-        <img id='amex' src={Amex} />
+        <div className='icons'>
+            <h3>Select Payment Option: </h3>
+            <img id='icons' src={PayPal} />
+            <img id='icons' src={MasterCard} />
+            <img id='icons' src={VisaDebit} />
+            <img id='icons' src={Amex} />
+        </div>
     </div>
 )}
 
