@@ -26,6 +26,7 @@ const Home = ({setCatsInBasket}) => {
           dob: faker.date.birthdate({min: 0, max: 22, mode: "age"}),
           city: faker.location.city(),
           price: parseInt(faker.commerce.price({min: 100, max: 1500, dec: 2})),
+          bio: faker.person.bio()
           // picture: this.url
       }})
 
@@ -64,7 +65,7 @@ const Home = ({setCatsInBasket}) => {
 
   return (
     <>
-      <h1>Cats4Lyfe</h1>
+      <h1>🐈‍⬛ Cats4Lyfe 🐈‍⬛</h1>
 
       {errorMsg !== "" && <p>{errorMsg}</p>}
       <div id="catContainer">
@@ -85,6 +86,7 @@ const Home = ({setCatsInBasket}) => {
               <h2>{selected.name}</h2>
               <p>This cat is from {selected.city}!</p>
               <p>This cat was born on {selected.dob.toString()}!</p>
+              <p>🐠</p>
             </div>
 
             <p>{selected.description}</p>

@@ -1,5 +1,5 @@
 import PayPal  from '../assets/Paypal.png'
-import VisaDebit from '../assets/visa.png'
+import VisaDebit from '../assets/Visa.png'
 import MasterCard from '../assets/mastercard.png'
 import  Amex  from '../assets/amex.png'
 
@@ -12,6 +12,7 @@ const Checkout = ({catsInBasket}) => {
             return (
                 <div key={index}> 
                 <h2>{cat.name}</h2>
+                <img src={cat.url} />
                 <h2>£{cat.price}</h2>
                 </div>
             )
