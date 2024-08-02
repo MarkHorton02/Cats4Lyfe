@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Checkout from './pages/Checkout'
 
 const App = () => {
-  const [total, setTotal] = useState()
+  // const [total, setTotal] = useState()
   const [open, setOpen] = useState(false);
   const [catsInBasket, setCatsInBasket] = useState ([])
   const navigate = useNavigate()
